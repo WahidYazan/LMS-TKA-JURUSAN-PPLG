@@ -177,11 +177,10 @@ export default function SimulasiUjian() {
                   return (
                     <motion.div
                       key={q.id}
-                      className={`p-4 md:p-6 rounded-xl border-2 ${
-                        isCorrect
-                          ? "bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800"
-                          : "bg-rose-50 dark:bg-rose-950/30 border-rose-200 dark:border-rose-800"
-                      }`}
+                      className={`p-4 md:p-6 rounded-xl border-2 ${isCorrect
+                        ? "bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800"
+                        : "bg-rose-50 dark:bg-rose-950/30 border-rose-200 dark:border-rose-800"
+                        }`}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.8 + index * 0.05 }}
@@ -249,25 +248,6 @@ export default function SimulasiUjian() {
     <div className="min-h-screen bg-sky-50 dark:bg-[#070e1e] text-slate-800 dark:text-slate-100 flex flex-col transition-colors duration-200">
       <Navbar showNavLinks={true} />
       <div className="container mx-auto px-4 py-8 md:py-12 flex-1">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Link
-            href="/dashboard"
-            className="inline-flex items-center text-sky-600 dark:text-sky-400 hover:text-sky-800 dark:hover:text-sky-300 mb-6 font-semibold group"
-          >
-            <motion.span
-              className="mr-2"
-              whileHover={{ x: -4 }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
-              ←
-            </motion.span>
-            Kembali ke Dashboard
-          </Link>
-        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -317,11 +297,10 @@ export default function SimulasiUjian() {
                     <motion.button
                       key={index}
                       onClick={() => handleAnswer(index)}
-                      className={`w-full text-left p-4 md:p-5 rounded-2xl border-2 transition-all duration-200 relative overflow-hidden cursor-pointer ${
-                        selectedAnswers[qId] === index
-                          ? "border-sky-500 bg-sky-50/70 dark:bg-sky-950/50 shadow-xs"
-                          : "border-slate-200 dark:border-slate-800 hover:border-sky-300 dark:hover:border-sky-600 hover:bg-sky-50/30 dark:hover:bg-slate-800/40"
-                      }`}
+                      className={`w-full text-left p-4 md:p-5 rounded-2xl border-2 transition-all duration-200 relative overflow-hidden cursor-pointer ${selectedAnswers[qId] === index
+                        ? "border-sky-500 bg-sky-50/70 dark:bg-sky-950/50 shadow-xs"
+                        : "border-slate-200 dark:border-slate-800 hover:border-sky-300 dark:hover:border-sky-600 hover:bg-sky-50/30 dark:hover:bg-slate-800/40"
+                        }`}
                       whileHover={{ scale: 1.01, x: 3 }}
                       whileTap={{ scale: 0.99 }}
                       initial={{ opacity: 0, y: 15 }}
@@ -330,11 +309,10 @@ export default function SimulasiUjian() {
                     >
                       <div className="relative z-10 flex items-center">
                         <span
-                          className={`w-8 h-8 rounded-full flex items-center justify-center mr-4 font-bold text-sm ${
-                            selectedAnswers[qId] === index
-                              ? "bg-sky-500 text-white"
-                              : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
-                          }`}
+                          className={`w-8 h-8 rounded-full flex items-center justify-center mr-4 font-bold text-sm ${selectedAnswers[qId] === index
+                            ? "bg-sky-500 text-white"
+                            : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
+                            }`}
                         >
                           {String.fromCharCode(65 + index)}
                         </span>
@@ -347,15 +325,15 @@ export default function SimulasiUjian() {
             </AnimatePresence>
 
             <div className="flex justify-between gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
-              <button
+              {/* <button
                 onClick={handlePrevious}
                 disabled={currentQuestion === 0}
                 className="bg-white dark:bg-slate-900 border border-sky-300 dark:border-slate-700 text-sky-700 dark:text-sky-300 py-3 px-6 rounded-xl hover:bg-sky-50 dark:hover:bg-slate-800 transition-colors font-semibold flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
               >
                 <span>←</span>
                 Sebelumnya
-              </button>
-              <button
+              </button> */}
+              {/* <button
                 onClick={handleNext}
                 disabled={selectedAnswers[qId] === undefined || isSubmitting}
                 className="bg-sky-500 text-white py-3 px-6 rounded-xl hover:bg-sky-600 transition-colors font-semibold flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed shadow-xs ml-auto cursor-pointer"
@@ -363,12 +341,36 @@ export default function SimulasiUjian() {
                 {isSubmitting
                   ? "Menghitung Nilai..."
                   : currentQuestion === examQuestions.length - 1
-                  ? "Selesai & Kumpulkan"
-                  : "Selanjutnya"}
+                    ? "Selesai & Kumpulkan"
+                    : "Selanjutnya"}
                 <span>→</span>
-              </button>
+              </button> */}
             </div>
           </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="mt-8 max-w-4xl mx-auto flex flex-row justify-between gap-3"
+        >
+          <Link
+            href="/dashboard"
+            className="flex-1 md:flex-none bg-white dark:bg-slate-900 text-sky-700 dark:text-sky-300 border border-sky-300 dark:border-slate-700 py-3 px-3 md:px-6 rounded-xl hover:bg-sky-50 dark:hover:bg-slate-800 transition-colors font-semibold flex items-center justify-center gap-2 text-sm md:text-base whitespace-nowrap"
+          >
+            <span>←</span>
+            <span className="hidden sm:inline">Kembali ke Dashboard</span>
+            <span className="sm:hidden">Dashboard</span>
+          </Link>
+          <Link
+            href="/modul/5"
+            className="flex-1 md:flex-none bg-sky-500 hover:bg-sky-600 text-white py-3 px-3 md:px-6 rounded-xl transition-colors font-semibold flex items-center justify-center gap-2 shadow-xs text-sm md:text-base whitespace-nowrap"
+          >
+            <span className="hidden sm:inline">Selanjutnya</span>
+            <span className="sm:hidden">Selanjutnya</span>
+            <span>→</span>
+          </Link>
         </motion.div>
       </div>
       <Footer />

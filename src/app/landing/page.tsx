@@ -189,8 +189,8 @@ export default function LandingPage() {
               </p>
               <ul className="space-y-4 text-slate-700 dark:text-slate-300">
                 {[
-                  "Materi terkurasi berdasarkan Capaian Pembelajaran (CP) terbaru",
-                  "Soal penalaran logika dan pemecahan masalah (HOTS)",
+                  "Materi terkurasi berdasarkan Capaian Pembelajaran terbaru",
+                  "Soal penalaran logika dan pemecahan masalah",
                   "Modul interaktif dengan rangkuman dan studi kasus",
                   "Simulasi ujian dengan perhitungan skor instan",
                 ].map((item, i) => (
@@ -261,58 +261,6 @@ export default function LandingPage() {
                 </Link>
               </motion.div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white dark:bg-slate-900/60 border-t border-sky-200/80 dark:border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">
-              Kontak & Informasi
-            </h2>
-            <p className="text-slate-600 dark:text-slate-300 text-lg max-w-2xl mx-auto">
-              Informasi lebih lanjut seputar program pembelajaran dan asesmen kejuruan.
-            </p>
-          </motion.div>
-
-          <div className="flex flex-wrap justify-center gap-8">
-            {[
-              {
-                icon: "fas fa-school",
-                title: "Sekolah",
-                content: "SMK Telekomunikasi Tunas Harapan",
-              },
-              {
-                icon: "fas fa-envelope",
-                title: "Email",
-                content: "info@tunasharapan.info",
-              },
-            ].map((contact, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15, duration: 0.5 }}
-                className="bg-sky-50 dark:bg-slate-800/80 rounded-2xl p-8 text-center border border-sky-200 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 hover:border-sky-300 dark:hover:border-sky-500 transition-all min-w-[280px]"
-              >
-                <div className="text-3xl text-sky-500 dark:text-sky-400 flex items-center justify-center mx-auto mb-4">
-                  <i className={contact.icon}></i>
-                </div>
-                <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-2">
-                  {contact.title}
-                </h3>
-                <p className="text-slate-600 dark:text-slate-300 text-sm">{contact.content}</p>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
