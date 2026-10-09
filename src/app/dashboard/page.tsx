@@ -40,7 +40,7 @@ const modulesList = [
 
 export default function DashboardPage() {
   return (
-    <div className="min-h-screen bg-sky-50 flex flex-col">
+    <div className="min-h-screen bg-sky-50 dark:bg-[#070e1e] text-slate-800 dark:text-slate-100 flex flex-col transition-colors duration-200">
       <Navbar showNavLinks={true} />
 
       {/* Dashboard Main Content */}
@@ -51,15 +51,15 @@ export default function DashboardPage() {
           transition={{ duration: 0.5 }}
         >
           {/* Welcome Banner */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-sky-200 shadow-xs mb-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-sky-200 dark:border-slate-800 shadow-xs mb-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
-              <span className="inline-block px-3 py-1 bg-sky-100 text-sky-700 text-xs font-bold rounded-full mb-3">
+              <span className="inline-block px-3 py-1 bg-sky-100 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 text-xs font-bold rounded-full mb-3">
                 LMS TKA PPLG SMK TTH
               </span>
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-800 leading-tight">
-                Selamat Datang di <span className="text-sky-600">Dashboard TKA PPLG!</span>
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-800 dark:text-white leading-tight">
+                Selamat Datang di <span className="text-sky-600 dark:text-sky-400">Dashboard TKA PPLG!</span>
               </h1>
-              <p className="text-slate-600 mt-1 text-sm sm:text-base max-w-2xl">
+              <p className="text-slate-600 dark:text-slate-300 mt-1 text-sm sm:text-base max-w-2xl">
                 Akses langsung seluruh materi modul kejuruan dan latihan simulasi soal ujian Asesmen Nasional tanpa batas.
               </p>
             </div>
@@ -78,51 +78,51 @@ export default function DashboardPage() {
           <div className="grid md:grid-cols-2 gap-6 mb-10">
             <Link
               href="/simulasi-ujian"
-              className="bg-white rounded-2xl p-6 sm:p-7 shadow-xs border border-sky-200 hover:border-sky-400 hover:shadow-md transition-all group"
+              className="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-7 shadow-xs border border-sky-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500 hover:shadow-md transition-all group"
             >
               <div className="flex items-center gap-4 mb-3">
-                <div className="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-xl group-hover:bg-sky-500 group-hover:text-white transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-sky-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl group-hover:bg-sky-500 group-hover:text-white transition-colors">
                   <i className="fas fa-clipboard-check"></i>
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-800 group-hover:text-sky-600 transition-colors text-lg">
+                  <h3 className="font-bold text-slate-800 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors text-lg">
                     Simulasi Ujian HOTS
                   </h3>
-                  <span className="text-xs text-sky-600 font-semibold">10 Soal Interaktif</span>
+                  <span className="text-xs text-sky-600 dark:text-sky-400 font-semibold">10 Soal Interaktif</span>
                 </div>
               </div>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-600 dark:text-slate-300 text-sm">
                 Latihan soal berbasis kompetensi PPLG dengan penilaian otomatis dan pembahasan jawaban setelah ujian selesai.
               </p>
             </Link>
 
             <Link
               href="/modul/1"
-              className="bg-white rounded-2xl p-6 sm:p-7 shadow-xs border border-sky-200 hover:border-sky-400 hover:shadow-md transition-all group"
+              className="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-7 shadow-xs border border-sky-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500 hover:shadow-md transition-all group"
             >
               <div className="flex items-center gap-4 mb-3">
-                <div className="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-xl group-hover:bg-sky-500 group-hover:text-white transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-sky-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl group-hover:bg-sky-500 group-hover:text-white transition-colors">
                   <i className="fas fa-book-open"></i>
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-800 group-hover:text-sky-600 transition-colors text-lg">
+                  <h3 className="font-bold text-slate-800 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors text-lg">
                     Materi Pembelajaran Lengkap
                   </h3>
-                  <span className="text-xs text-sky-600 font-semibold">5 Modul Berstandar Pusmendik</span>
+                  <span className="text-xs text-sky-600 dark:text-sky-400 font-semibold">5 Modul Berstandar Pusmendik</span>
                 </div>
               </div>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-600 dark:text-slate-300 text-sm">
                 Materi disusun sistematis untuk mempersiapkan siswa SMK Telekomunikasi Tunas Harapan menghadapi ujian kejuruan.
               </p>
             </Link>
           </div>
 
           {/* Daftar 5 Modul Pembelajaran */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-sky-200 shadow-xs">
+          <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-sky-200 dark:border-slate-800 shadow-xs">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h2 className="text-xl font-bold text-slate-800">Daftar Modul Pembelajaran</h2>
-                <p className="text-slate-500 text-xs sm:text-sm">
+                <h2 className="text-xl font-bold text-slate-800 dark:text-white">Daftar Modul Pembelajaran</h2>
+                <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm">
                   Pilih modul di bawah ini untuk langsung membaca materi
                 </p>
               </div>
@@ -133,25 +133,25 @@ export default function DashboardPage() {
                 <Link
                   key={m.id}
                   href={`/modul/${m.id}`}
-                  className="p-5 rounded-2xl border border-sky-200 hover:border-sky-400 hover:shadow-md transition-all bg-sky-50/30 hover:bg-white flex flex-col justify-between group"
+                  className="p-5 rounded-2xl border border-sky-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500 hover:shadow-md transition-all bg-sky-50/30 dark:bg-slate-800/40 hover:bg-white dark:hover:bg-slate-800 flex flex-col justify-between group"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">
-                      <span className="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center text-xl">
+                      <span className="w-10 h-10 rounded-xl bg-sky-100 dark:bg-slate-700 text-sky-700 dark:text-sky-300 flex items-center justify-center text-xl">
                         {m.icon}
                       </span>
-                      <span className="text-xs font-extrabold text-sky-600 bg-white px-2.5 py-1 rounded-md border border-sky-200">
+                      <span className="text-xs font-extrabold text-sky-600 dark:text-sky-400 bg-white dark:bg-slate-900 px-2.5 py-1 rounded-md border border-sky-200 dark:border-slate-700">
                         Modul {m.id.toString().padStart(2, "0")}
                       </span>
                     </div>
-                    <h3 className="font-bold text-slate-800 group-hover:text-sky-600 transition-colors text-base mb-2">
+                    <h3 className="font-bold text-slate-800 dark:text-slate-100 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors text-base mb-2">
                       {m.title}
                     </h3>
-                    <p className="text-slate-600 text-xs leading-relaxed line-clamp-3">
+                    <p className="text-slate-600 dark:text-slate-300 text-xs leading-relaxed line-clamp-3">
                       {m.description}
                     </p>
                   </div>
-                  <div className="mt-4 pt-3 border-t border-sky-100 flex items-center justify-between text-xs font-bold text-sky-600">
+                  <div className="mt-4 pt-3 border-t border-sky-100 dark:border-slate-700 flex items-center justify-between text-xs font-bold text-sky-600 dark:text-sky-400">
                     <span>Pelajari Materi</span>
                     <span className="group-hover:translate-x-1 transition-transform">→</span>
                   </div>
