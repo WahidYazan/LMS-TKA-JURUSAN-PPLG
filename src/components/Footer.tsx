@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <div
-                className="relative h-11 w-11 rounded-xl overflow-hidden flex-shrink-0 bg-white border border-slate-200/80 dark:border-slate-700 shadow-xs p-1 flex items-center justify-center"
+                className="relative h-11 w-11 flex-shrink-0 flex items-center justify-center"
                 title={SCHOOL_NAME}
               >
                 <Image
@@ -23,7 +23,7 @@ export default function Footer() {
                   fill
                   sizes="44px"
                   quality={100}
-                  className="object-contain p-0.5"
+                  className="object-contain"
                   priority
                 />
               </div>

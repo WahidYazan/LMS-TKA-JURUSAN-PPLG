@@ -81,7 +81,7 @@ export default function DashboardPage() {
               className="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-7 shadow-xs border border-sky-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500 hover:shadow-md transition-all group"
             >
               <div className="flex items-center gap-4 mb-3">
-                <div className="w-12 h-12 rounded-xl bg-sky-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl group-hover:bg-sky-500 group-hover:text-white transition-colors">
+                <div className="text-3xl text-sky-500 dark:text-sky-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <i className="fas fa-clipboard-check"></i>
                 </div>
                 <div>
@@ -101,7 +101,7 @@ export default function DashboardPage() {
               className="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-7 shadow-xs border border-sky-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500 hover:shadow-md transition-all group"
             >
               <div className="flex items-center gap-4 mb-3">
-                <div className="w-12 h-12 rounded-xl bg-sky-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xl group-hover:bg-sky-500 group-hover:text-white transition-colors">
+                <div className="text-3xl text-sky-500 dark:text-sky-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <i className="fas fa-book-open"></i>
                 </div>
                 <div>
@@ -137,7 +137,7 @@ export default function DashboardPage() {
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">
-                      <span className="w-10 h-10 rounded-xl bg-sky-100 dark:bg-slate-700 text-sky-700 dark:text-sky-300 flex items-center justify-center text-xl">
+                      <span className="text-3xl flex items-center justify-center group-hover:scale-110 transition-transform">
                         {m.icon}
                       </span>
                       <span className="text-xs font-extrabold text-sky-600 dark:text-sky-400 bg-white dark:bg-slate-900 px-2.5 py-1 rounded-md border border-sky-200 dark:border-slate-700">

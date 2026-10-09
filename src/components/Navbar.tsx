@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
-const LOGO_PATH = "/images/brands/TTH.webp";
+const LOGO_PATH = "/images/brands/logo-smk.png";
 const FALLBACK_ABBR = "STH";
 const SCHOOL_NAME = "SMK Telekomunikasi Tunas Harapan";
 
@@ -37,7 +37,7 @@ export default function Navbar({ showNavLinks = true }: NavbarProps) {
               transition={{ duration: 0.4 }}
             >
               <div
-                className="relative h-11 w-11 rounded-xl overflow-hidden flex-shrink-0 bg-white border border-slate-200/80 dark:border-slate-700 shadow-xs p-1 flex items-center justify-center"
+                className="relative h-11 w-11 flex-shrink-0 flex items-center justify-center"
                 title={SCHOOL_NAME}
               >
                 {!logoError ? (
@@ -47,12 +47,12 @@ export default function Navbar({ showNavLinks = true }: NavbarProps) {
                     fill
                     sizes="44px"
                     quality={100}
-                    className="object-contain p-0.5"
+                    className="object-contain"
                     priority
                     onError={() => setLogoError(true)}
                   />
                 ) : (
-                  <div className="absolute inset-0 flex items-center justify-center bg-sky-500 text-white font-extrabold text-sm">
+                  <div className="h-10 w-10 rounded-xl flex items-center justify-center bg-sky-500 text-white font-extrabold text-sm">
                     {FALLBACK_ABBR}
                   </div>
                 )}

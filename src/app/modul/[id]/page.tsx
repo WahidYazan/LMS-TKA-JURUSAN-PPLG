@@ -95,8 +95,8 @@ function ModuleContent() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.15, duration: 0.4 }}
             >
-              <div className="w-20 h-20 md:w-28 md:h-28 rounded-2xl bg-sky-500 text-white flex items-center justify-center shadow-xs flex-shrink-0">
-                <span className="text-4xl md:text-5xl">{module.icon}</span>
+              <div className="flex items-center justify-center flex-shrink-0">
+                <span className="text-6xl md:text-7xl">{module.icon}</span>
               </div>
               <div className="text-center md:text-left">
                 <span className="text-5xl md:text-6xl font-extrabold text-sky-500 dark:text-sky-400 block leading-none mb-1">

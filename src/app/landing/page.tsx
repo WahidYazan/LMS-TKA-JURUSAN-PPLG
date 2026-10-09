@@ -80,7 +80,7 @@ export default function LandingPage() {
               transition={{ delay: 0.3, duration: 0.6 }}
               className="flex justify-center items-center mt-8 md:mt-0"
             >
-              <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-sky-200 dark:border-slate-800 shadow-sm relative w-full max-w-[480px]">
+              <div className="relative w-full max-w-[480px] flex items-center justify-center">
                 <motion.div
                   animate={{ y: [0, -6, 0] }}
                   transition={{
@@ -154,7 +154,7 @@ export default function LandingPage() {
                 transition={{ delay: index * 0.15, duration: 0.5 }}
                 className="bg-sky-50/60 dark:bg-slate-800/60 hover:bg-white dark:hover:bg-slate-800 rounded-2xl p-8 text-center transition-all duration-200 border border-sky-200 dark:border-slate-700 hover:border-sky-400 dark:hover:border-sky-500 hover:shadow-md group"
               >
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5 text-xl bg-sky-100 dark:bg-slate-700 text-sky-600 dark:text-sky-400 shadow-xs group-hover:scale-105 transition-transform">
+                <div className="text-4xl text-sky-500 dark:text-sky-400 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
                   <i className={feature.icon}></i>
                 </div>
                 <h3 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-3">
@@ -202,9 +202,9 @@ export default function LandingPage() {
                     transition={{ delay: i * 0.1 }}
                     className="flex items-center gap-3 font-medium text-slate-700 dark:text-slate-200"
                   >
-                    <div className="w-6 h-6 rounded-full bg-sky-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400 flex items-center justify-center text-xs flex-shrink-0">
+                    <span className="text-sky-500 dark:text-sky-400 text-base flex-shrink-0">
                       <i className="fas fa-check"></i>
-                    </div>
+                    </span>
                     <span>{item}</span>
                   </motion.li>
                 ))}
@@ -304,7 +304,7 @@ export default function LandingPage() {
                 transition={{ delay: index * 0.15, duration: 0.5 }}
                 className="bg-sky-50 dark:bg-slate-800/80 rounded-2xl p-8 text-center border border-sky-200 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800 hover:border-sky-300 dark:hover:border-sky-500 transition-all min-w-[280px]"
               >
-                <div className="w-12 h-12 rounded-xl bg-sky-100 dark:bg-slate-700 text-sky-600 dark:text-sky-400 flex items-center justify-center mx-auto mb-4 text-xl">
+                <div className="text-3xl text-sky-500 dark:text-sky-400 flex items-center justify-center mx-auto mb-4">
                   <i className={contact.icon}></i>
                 </div>
                 <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-2">
